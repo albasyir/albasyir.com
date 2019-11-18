@@ -3,13 +3,13 @@
     <div>
       <h1 class="title">
         <i class="fa fa-child" aria-hidden="true"></i>
-        Comming Soon
+        Test Page
       </h1>
       <h2 class="subtitle">
-        Personal site abdul aziz al basyir for portfolio, blog, and free e-book
+        Just for eval. loading style
       </h2>
       <h3>
-        <nuxt-link to='/about'>Example Other Menus</nuxt-link>
+        <nuxt-link to='/'>Back</nuxt-link>
       </h3>
     </div>
   </div>

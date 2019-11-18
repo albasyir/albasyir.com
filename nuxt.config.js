@@ -5,37 +5,49 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: "Abdul Aziz Al Basyir Personal Sites",
+    title: "Albasyir - Software Engineer",
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
+      { hid: 'description', name: 'description', content: "Berbagi tentang saya, pekerjaan, dan E-book dari praktik" }
     ],
     link: [
+      // favicon
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+
+      // font
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' },
-      { rel: ''}
+
+      // icon
+      { rel: 'stylesheet', href: '/vendor/nucleo/css/nucleo.css' },
+      { rel: 'stylesheet', href: '/vendor/font-awesome/css/font-awesome.min.css' },
+
+      // argon CSS
+      { rel: 'stylesheet', href: '/css/argon.css' }
     ]
   },
+
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+
+  loading: '~/components/Loading',
+
   /*
   ** Global CSS
   */
-  css: [
-  ],
+  css: [],
+
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-  ],
+  plugins: [],
+
   /*
   ** Nuxt.js dev-modules
   */
-  buildModules: [
-  ],
+  buildModules: [],
+
   /*
   ** Nuxt.js modules
   */
@@ -44,12 +56,14 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
   ],
+
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
   },
+
   /*
   ** Build configuration
   */
