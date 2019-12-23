@@ -1,10 +1,7 @@
 <template>
-  <div class='container-fluid my-3' >
+  <div class='container-fluid bg-default'>
     <div class="container">
-      <h1>Abdul Aziz Al Basyir</h1>
-      <p>
-        Portfolio sedang dibangun
-      </p>
+      <h1 class='text-white'>Hosting</h1>
     </div>
   </div>
 </template>

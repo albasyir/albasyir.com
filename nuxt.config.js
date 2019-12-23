@@ -5,11 +5,11 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: "Albasyir - Software Engineer",
+    title: "Albasyir - Dont make same, Make Better",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
-      { hid: 'description', name: 'description', content: "Berbagi tentang saya, pekerjaan, dan E-book dari praktik" }
+      { hid: 'description', name: 'description', content: "Dont make same, make better" }
     ],
     link: [
       // favicon

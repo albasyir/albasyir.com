@@ -1,51 +1,55 @@
 <style scoped>
-  .loading-enter-active, .loading-leave-active {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: #5e72e4;
-    transition: all 2000ms;
+  .layer-leave-active, .layer-enter-active {
+    opacity: 0;
+    transition: all 1s;
   }
 
-  .loading-enter {
+  .layer-enter {
+    opacity: 1;
+  }
+
+  .layer-leave-to {
+    opacity: 0;
+  }
+
+  .slide-leave-active, .slide-enter-active {
+    width: 0;
+    height: 100vh;
+    position: fixed;
+    transition: width 0.8s, margin-left 1.5s;
+    z-index: 999;
+  }
+
+  .slide-enter {
+    margin-left: 0;
     width: 0;
   }
 
-  .loading-leave-to {
-    left: 100vw;
+  .slide-leave-to {
+    margin-left: 100vw;
+    width: 100%;
   }
 
-  .loadingTextContainer {
+  .fixed-all {
     position: fixed;
     top:0;
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 5vh 5vw;
+    z-index: 998;
   }
-
-  .loadingTextContent {
-    font-size: 100pt; 
-    color: white;
-    font-weight: bolder;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #5e72e4;
-    padding: 0 0 0 20px;
-  }  
 </style>
 
 <template>
-  <transition name='loading'>
-    <div v-if='loading'>
-      <div class='loadingTextContainer'>
-        <div class='loadingTextContent'>
-          Please Wait...
-        </div>
-      </div>
-    </div>
-  </transition>
+  <div>
+    <transition v-if='loading' name='slide'>
+      <div class='bg-light'></div>
+    </transition>
+
+    <transition v-if='loading' name='layer'>
+      <div class='fixed-all bg-default'></div>
+    </transition>
+  </div>
 </template>
 
 <script>

@@ -1,6 +1,6 @@
-# albasyir-personal-site
+# Albasyir Official Site
 
-> personal site abdul aziz al basyir for portfolio, blog, and free e-book
+> Dont make same, make better
 
 ## Build Setup
 
