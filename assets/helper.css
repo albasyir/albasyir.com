@@ -1,0 +1,8 @@
+.container {
+    max-width: 1150px;
+    margin: auto;
+}
+
+.vh-100 {
+    min-height: 100vh;
+}

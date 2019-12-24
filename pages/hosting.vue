@@ -1,12 +1,52 @@
 <template>
-  <div class='container-fluid bg-default pb-5 pt-3'>
-    <div class="container">
-      <div>
-        <h2 class='text-white'>Unlimited Hosting</h2>
+  <div>
+    <div class='container-fluid bg-default py-5'>
+      <div class="container">
+        <div class='row'>
+          <div class='col-12 col-md-5 col-lg-6'>
+            <h2 class='my-lg-5 display-3 text-white'>
+              Hosting Terbaik Dari Kami
+            </h2>
+            <p class='h4 text-white'>
+              Proritas kecepatan, keamanan dan termurah <br />
+              <b>harga mulai dari 20.000 / bln</b>
+            </p>
+
+            <button class='btn btn-primary'>Beli Sekarang</button>
+          </div>
+          <div class='col-12 col-md-7 col-lg-6'>
+            <img class='my-3' width="100%" src="/img/hosting-header.webp" alt="header hosting">
+          </div>
+        </div>
       </div>
-      <div class='row'>
-        <div v-for='row in product.unlimited' class='col'>
-          <Product :title='row.title' :descList="row.descList" />
+    </div>
+    
+    <div class='container-fluid py-5'>
+      <div class="container">
+        <div>
+          <h2>Unlimited Hosting</h2>
+          <p>
+            Pilih produk yang anda inginkan
+          </p>
+        </div>
+        <div class='row'>
+          <div v-for='row in product.unlimited' class='col-lg-3 col-md-4 col-sm-6 col-12'>
+            <Product 
+              class='my-3'
+              :title='row.title' 
+              :descList="row.descList" 
+              :price="row.price"
+              :label="row.label"
+              :buybutton="row.buybutton"
+            />
+          </div>
+          <div class='col-12'>
+            <div class='card'>
+              <div class='card-body'>
+                Produk lainya akan segera tiba untuk anda 
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -21,6 +61,17 @@ export default {
     Product
   },
 
+  head: () => ({
+    title: "Hosting Murah, Handal dan Cepat - Albasyir",
+    meta: [
+      { 
+        hid: 'description', 
+        name: 'description', 
+        content: 'Proritas kecepatan, keamanan dan termurah, harga mulai dari 20.000 / bulan' 
+      }
+    ]
+  }),
+
   asyncData () {
     return new Promise((resolve) => {
       setTimeout(function () {
@@ -34,6 +85,10 @@ export default {
       unlimited: [
         {
           title: "Merakyat",
+          price: 23114,
+          buybutton: function() {
+             window.location.assign("https://api.whatsapp.com/send?phone=6285783821812&text=Saya%20ingin%20produk%20hosting%20*Merakyat*&source=https://albasyir.com/hosting")
+          },
           descList: [
             { 
               name: '500 MB Disk Space', 
@@ -41,31 +96,192 @@ export default {
             }, 
             { 
               name: 'Unlimited Bandwidth', 
-              desc: 'Kami menetapkan batasan jumlah ruang disk sebanyak 500MB dalam paket ini'
+              desc: 
+                "Kami tidak menetapkan batasan bandwidth yang dapat Anda gunakan untuk pengoperasian " +
+                "situs web Anda selama itu sesuai dengan ToS kami!"
             },
             { 
               name: 'Unlimited Database', 
-              desc: 'Kami menetapkan batasan jumlah ruang disk sebanyak 500MB dalam paket ini'
+              desc: 
+                "Anda tidak dibatasi untuk membuat database pada akun hosting Anda. " + 
+                "Selama itu sesuai dengan ToS kami!"
             },
             { 
               name: '1 Domain', 
-              desc: 'Kami menetapkan batasan jumlah ruang disk sebanyak 500MB dalam paket ini'
+              desc: `Anda hanya bisa menggunakan 1 domain pada akun hosting Anda.`
             },
             { 
               name: 'Instant Backup', 
-              desc: 'Kami menetapkan batasan jumlah ruang disk sebanyak 500MB dalam paket ini'
+              desc: 
+                "Kami memberikan fasilitas untuk membuat cadangan dari seluruh akun cPanel Anda kapan saja. " +
+                "Setelah selesai melakukan backup, Anda akan diberi link download. " +
+                "Anda bisa menggunakan backup ini untuk mengembalikan akun Anda di server kami jika diperlukan."
             },
             { 
               name: 'SSL Gratis Selamanya',
-              desc: 'Kami menetapkan batasan jumlah ruang disk sebanyak 500MB dalam paket ini'
+              desc: 
+                "Kami memberikan fasilitas SSL gratis selamanya " +
+                "dan dapat digunakan untuk semua klien layanan hosting kami tanpa batasan jumlah website, " + 
+                "domain ataupun subdomain."
             }
           ]
         },
+
         {
-          title: "Merakyat2",
+          title: "Hemat",
+          price: 43180,
+          buybutton: function() {
+             window.location.assign("https://api.whatsapp.com/send?phone=6285783821812&text=Saya%20ingin%20produk%20hosting%20*Hemat*&source=https://albasyir.com/hosting")
+          },
           descList: [
-            { name: 'test3' }, 
-            { name: 'test4' }
+            { 
+              name: 'Unlimited Disk Space', 
+              desc: 'Kami tidak menetapkan batasan jumlah ruang disk yang dapat Anda gunakan untuk pengoperasian normal situs web pribadi, kecil, atau menengah selama itu sesuai dengan ToS kami!' 
+            }, 
+            { 
+              name: 'Unlimited Bandwidth', 
+              desc: 
+                "Kami tidak menetapkan batasan bandwidth yang dapat Anda gunakan untuk pengoperasian " +
+                "situs web Anda selama itu sesuai dengan ToS kami!"
+            },
+            { 
+              name: 'Unlimited POP3 Email', 
+              desc: "Anda berhak membuat akun email tanpa batasan dan melakukan pengiriman sebanyak2nya kepada klien Anda selama itu sesuai dengan ToS kami!"
+            },
+            { 
+              name: 'Unlimited Database', 
+              desc: 
+                "Anda tidak dibatasi untuk membuat database pada akun hosting Anda. " + 
+                "Selama itu sesuai dengan ToS kami!"
+            },
+            { 
+              name: '10 Addon Domain', 
+              desc: `Anda hanya dapat membuat 10 Addon domain pada akun hosting Anda.`
+            },
+            { 
+              name: 'Instant Backup', 
+              desc: 
+                "Kami memberikan fasilitas untuk membuat cadangan dari seluruh akun cPanel Anda kapan saja. " +
+                "Setelah selesai melakukan backup, Anda akan diberi link download. " +
+                "Anda bisa menggunakan backup ini untuk mengembalikan akun Anda di server kami jika diperlukan."
+            },
+            { 
+              name: 'SSL Gratis Selamanya',
+              desc: 
+                "Kami memberikan fasilitas SSL gratis selamanya " +
+                "dan dapat digunakan untuk semua klien layanan hosting kami tanpa batasan jumlah website, " + 
+                "domain ataupun subdomain."
+            }
+          ]
+        },
+
+        {
+          title: "Personal",
+          label: "Produk Terbaik",
+          price: 63529,
+          buybutton: function() {
+             window.location.assign("https://api.whatsapp.com/send?phone=6285783821812&text=Saya%20ingin%20produk%20hosting%20*Personal*&source=https://albasyir.com/hosting")
+          },
+          descList: [
+            { 
+              name: 'Unlimited Disk Space', 
+              desc: 'Kami tidak menetapkan batasan jumlah ruang disk yang dapat Anda gunakan untuk pengoperasian normal situs web pribadi, kecil, atau menengah selama itu sesuai dengan ToS kami!' 
+            }, 
+            { 
+              name: 'Unlimited Bandwidth', 
+              desc: 
+                "Kami tidak menetapkan batasan bandwidth yang dapat Anda gunakan untuk pengoperasian " +
+                "situs web Anda selama itu sesuai dengan ToS kami!"
+            },
+            { 
+              name: 'Unlimited POP3 Email', 
+              desc: "Anda berhak membuat akun email tanpa batasan dan melakukan pengiriman sebanyak2nya kepada klien Anda selama itu sesuai dengan ToS kami!"
+            },
+            { 
+              name: 'Unlimited Database', 
+              desc: 
+                "Anda tidak dibatasi untuk membuat database pada akun hosting Anda. " + 
+                "Selama itu sesuai dengan ToS kami!"
+            },
+            { 
+              name: 'Unlimited Addon Domain', 
+              desc: `Anda tidak dibatasi untuk membuat Addon domain pada akun hosting Anda. Selama itu sesuai dengan ToS kami!`
+            },
+            { 
+              name: 'Instant Backup', 
+              desc: 
+                "Kami memberikan fasilitas untuk membuat cadangan dari seluruh akun cPanel Anda kapan saja. " +
+                "Setelah selesai melakukan backup, Anda akan diberi link download. " +
+                "Anda bisa menggunakan backup ini untuk mengembalikan akun Anda di server kami jika diperlukan."
+            },
+            { 
+              name: 'SSL Gratis Selamanya',
+              desc: 
+                "Kami memberikan fasilitas SSL gratis selamanya " +
+                "dan dapat digunakan untuk semua klien layanan hosting kami tanpa batasan jumlah website, " + 
+                "domain ataupun subdomain."
+            },
+            { 
+              name: 'SpamAsassin Mail Protection',
+              desc: "Fasilitas untuk mendeteksi email spam yang tidak diinginkan lalu mencegah masuknya email-email tersebut ke Inbox Anda."
+            }
+          ]
+        },
+
+
+        {
+          title: "Proritas",
+          price: 93908,
+          buybutton: function() {
+             window.location.assign("https://api.whatsapp.com/send?phone=6285783821812&text=Saya%20ingin%20produk%20hosting%20*Proritas*&source=https://albasyir.com/hosting")
+          },
+          descList: [
+            { 
+              name: 'Unlimited Disk Space', 
+              desc: 'Kami tidak menetapkan batasan jumlah ruang disk yang dapat Anda gunakan untuk pengoperasian normal situs web pribadi, kecil, atau menengah selama itu sesuai dengan ToS kami!' 
+            }, 
+            { 
+              name: 'Unlimited Bandwidth', 
+              desc: 
+                "Kami tidak menetapkan batasan bandwidth yang dapat Anda gunakan untuk pengoperasian " +
+                "situs web Anda selama itu sesuai dengan ToS kami!"
+            },
+            { 
+              name: 'Unlimited POP3 Email', 
+              desc: "Anda berhak membuat akun email tanpa batasan dan melakukan pengiriman sebanyak2nya kepada klien Anda selama itu sesuai dengan ToS kami!"
+            },
+            { 
+              name: 'Unlimited Database', 
+              desc: 
+                "Anda tidak dibatasi untuk membuat database pada akun hosting Anda. " + 
+                "Selama itu sesuai dengan ToS kami!"
+            },
+            { 
+              name: 'Unlimited Addon Domain', 
+              desc: `Anda tidak dibatasi untuk membuat Addon domain pada akun hosting Anda. Selama itu sesuai dengan ToS kami!`
+            },
+            { 
+              name: 'Instant Backup', 
+              desc: 
+                "Kami memberikan fasilitas untuk membuat cadangan dari seluruh akun cPanel Anda kapan saja. " +
+                "Setelah selesai melakukan backup, Anda akan diberi link download. " +
+                "Anda bisa menggunakan backup ini untuk mengembalikan akun Anda di server kami jika diperlukan."
+            },
+            { 
+              name: 'SSL Gratis Selamanya',
+              desc: 
+                "Kami memberikan fasilitas SSL gratis selamanya " +
+                "dan dapat digunakan untuk semua klien layanan hosting kami tanpa batasan jumlah website, " + 
+                "domain ataupun subdomain."
+            },
+            { 
+              name: 'Prioritas Layanan Support',
+              desc: "Tim Customer Experience kami yang terlatih dan berdedikasi akan siap 24/7/365 melalui telepon, live chat, dan email membantu menyelesaikan masalah segala hal yang berhubungan dengan akun web hosting atau billing Anda."
+            },
+            { 
+              name: 'SpamAsassin Mail Protection',
+              desc: "Fasilitas untuk mendeteksi email spam yang tidak diinginkan lalu mencegah masuknya email-email tersebut ke Inbox Anda."
+            }
           ]
         }
       ]
