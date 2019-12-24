@@ -24,6 +24,12 @@ export default {
 
       // argon CSS
       { rel: 'stylesheet', href: '/css/argon.css' }
+    ],
+    script: [
+      { src: '/vendor/jquery/jquery.min.js' },
+      { src: '/vendor/popper/popper.min.js' },
+      { src: '/vendor/bootstrap/bootstrap.min.js' },
+      { src: '/js/argon.min.js' }
     ]
   },
 

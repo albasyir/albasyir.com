@@ -2,8 +2,8 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-default">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="/icon.png" width="30" height="30" alt="">
-                <span>
+                <img src="/icon.png" alt="Albasyir Logo">
+                <span class='ml-2'>
                     Al-basyir
                 </span>
             </a>
@@ -35,7 +35,7 @@
                 <ul class="navbar-nav ml-lg-auto">
                     <li class="nav-item">   
                         <nuxt-link tag='a' class="nav-link nav-link-icon" to="/">
-                            <i class="ni ni-circle-08"></i>
+                            <i class="ni ni-circle-08" />
                             <span class="nav-link-inner--text">
                                 Portfolio
                             </span>
@@ -44,13 +44,14 @@
 
                     <li class="nav-item">   
                         <nuxt-link tag='a' class="nav-link nav-link-icon" to="/hosting">
-                            <i class="ni ni-world-2"></i>
+                            <i class="ni ni-world-2" />
                             <span class="nav-link-inner--text">
                                 Hosting
                             </span>
                         </nuxt-link>
                     </li>
 
+                    <!--
                     <li class="nav-item dropdown">
                         <a class="nav-link nav-link-icon" href="#" id="navbar-default_dropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="ni ni-books"></i>
@@ -64,6 +65,7 @@
                             <a class="dropdown-item" href="#">Express Framework</a>
                         </div>
                     </li>
+                    -->
                 </ul>
             </div>
         </div>
