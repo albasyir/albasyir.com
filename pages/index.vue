@@ -2,11 +2,9 @@
   <div class='container-fluid my-3' >
     <div class="container">
       <h1>Abdul Aziz Al Basyir</h1>
-      <p>
         Portfolio saya akan segera hadir, 
         untuk promosi halaman ini akan diarahkan ke produk hosting kami 
         dalam {{ detik }} detik...
-      </p>
     </div>
   </div>
 </template>
@@ -23,7 +21,7 @@ export default {
   },
 
   data: () => ({
-    detik: 5
+    detik: 10
   }),
 
 
