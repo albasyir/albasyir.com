@@ -1,9 +1,9 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-default">
-        <div class="container">
+    <header class="navbar navbar-expand-lg navbar-dark bg-default">
+        <nav class="container">
             <a class="navbar-brand" href="#">
-                <img src="/icon.png" alt="Albasyir Logo">
-                <span class='ml-2'>
+                <span class='display-4'>
+                    <img style='height:30px' src="/icon.png" alt="Albasyir Logo">
                     Al-basyir
                 </span>
             </a>
@@ -73,6 +73,6 @@
                     -->
                 </ul>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 </template>
