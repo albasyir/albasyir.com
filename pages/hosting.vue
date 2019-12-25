@@ -9,10 +9,13 @@
             </h2>
             <p class='h4 text-white'>
               Proritas kecepatan, keamanan dan termurah <br />
-              <b>harga mulai dari 20.000 / bln</b>
+              <b>
+                harga mulai dari 20.000 / bln <br />
+                ( TERMASUK PPN, WOW! )
+              </b>
             </p>
 
-            <button class='btn btn-primary'>Beli Sekarang</button>
+            <button class='btn btn-primary my-2'>Scroll kebawah</button>
           </div>
           <div class='col-12 col-md-7 col-lg-6'>
             <img class='my-3' width="100%" src="/img/hosting-header.webp" alt="header hosting">
@@ -20,13 +23,49 @@
         </div>
       </div>
     </div>
+
+    <div class='container-fluid py-3'>
+      <div class='container'>
+        <div class='text-center'>
+          <h2>Mengapa Memilih Kami?</h2>
+          <p>
+            Alasanya cukup sederhana
+          </p>
+        </div>
+        <div class='row'>
+          <div class='col-12 col-md-6 col-lg-4'>
+            <ListCard 
+              keylist="1"
+              title="Hosting Super Cepat"
+              desc="Pengunjung tidak suka website lambat. Dengan dukungan LiteSpeed Web Server, waktu loading website Anda akan meningkat pesat."
+            />
+          </div>
+
+          <div class='col-12 col-md-6 col-lg-4'>
+            <ListCard 
+              keylist="2"
+              title="Keamanan Website Ekstra"
+              desc="Teknologi keamanan Imunify 360 memungkinkan website Anda terlindung dari serangan hacker, malware, dan virus berbahaya setiap saat."
+            />
+          </div>
+
+          <div class='col-12 col-md-12 col-lg-4'>
+            <ListCard 
+              keylist="3"
+              title="Biaya Hemat, Kualitas Hebat"
+              desc="Anda bisa berhemat dan tetap mendapatkan hosting terbaik dengan fitur lengkap, dari auto install WordPress, cPanel lengkap, hingga SSL gratis."
+            />
+          </div>
+        </div>
+      </div>
+    </div>
     
     <div class='container-fluid py-5'>
       <div class="container">
-        <div>
+        <div class='text-center'>
           <h2>Unlimited Hosting</h2>
           <p>
-            Pilih produk yang anda inginkan
+            Pilihan yang cocok website sekala kecil s.d menegah
           </p>
         </div>
         <div class='row'>
@@ -50,15 +89,25 @@
         </div>
       </div>
     </div>
+
+    <div class='container-fluid bg-yellow py-2'>
+      <div class='container'>
+        <p class='m-0'>
+          Hosting powered by PHP7, CloudLinux, CloudFlare, BitNinja and DC DCI-Indonesia. 
+          Cloud VPS Murah powered by Webuzo Softaculous, Intel SSD and cloud computing technology
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import Product from '@/components/product/hosting/Package.vue'
+import Product from '@/components/Package.vue'
+import ListCard from '@/components/ListCard.vue'
 
 export default {
   components: {
-    Product
+    Product, ListCard
   },
 
   head: () => ({
@@ -85,6 +134,7 @@ export default {
       unlimited: [
         {
           title: "Merakyat",
+          label: "Pemula ?",
           price: 23114,
           buybutton: function() {
              window.location.assign("https://api.whatsapp.com/send?phone=6285783821812&text=Saya%20ingin%20produk%20hosting%20*Merakyat*&source=https://albasyir.com/hosting")
