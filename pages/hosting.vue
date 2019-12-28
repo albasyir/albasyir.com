@@ -10,8 +10,8 @@
             <p class='h4 text-white'>
               Proritas kecepatan, keamanan dan termurah <br />
               <b>
-                harga mulai dari 20.000 / bln <br />
-                ( TERMASUK PPN, WOW! )
+                harga mulai dari 20.000<sub>/bln</sub> <br />
+                termasuk PPN!
               </b>
             </p>
 
@@ -120,14 +120,6 @@ export default {
       }
     ]
   }),
-
-  asyncData () {
-    return new Promise((resolve) => {
-      setTimeout(function () {
-        resolve({})
-      }, 1)
-    })
-  },
 
   data: () => ({
     product: {

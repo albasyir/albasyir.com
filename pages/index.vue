@@ -1,38 +1,30 @@
 <template>
-  <div class='container-fluid my-3' >
-    <div class="container">
-      <h1>Abdul Aziz Al Basyir</h1>
-        Portfolio saya akan segera hadir, 
-        untuk promosi halaman ini akan diarahkan ke produk hosting kami 
-        dalam {{ detik }} detik...
-    </div>
+  <div class='container-fluid py-5 bg-default' >
+    <SlideText :slidesData='slides'  />
   </div>
 </template>
 
 <script>
-export default {
+import SlideText from '@/components/SlideText.vue'
 
-  asyncData () {
-    return new Promise((resolve) => {
-      setTimeout(function () {
-        resolve({})
-      }, 1)
-    })
+import typerjs from 'typer-js'
+
+export default {
+  components: {
+    SlideText
   },
 
   data: () => ({
-    detik: 10
-  }),
-
-
-  mounted() {
-    setInterval(() => {
-      this.detik = this.detik - (this.detik > 0 ? 1 : 0);
-    }, 1000)
-
-    setTimeout(() => {
-      this.$router.push('/hosting')
-    }, this.detik * 1000 )
-  }
+    slides: [
+      {
+        title: "Kami Membuat Mitra",
+        desc: "Tidak klien-vendor atau vendor-klien, kita kolaborasi untuk sukses bersama."
+      },
+      {
+        title: "Kami Punya Ekosistem",
+        desc: "Desain, pengembangan, dan penerapan untuk perusahaan atau start-up."
+      }
+    ]
+  })
 }
 </script>

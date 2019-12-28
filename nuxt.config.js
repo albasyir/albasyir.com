@@ -38,6 +38,7 @@ export default {
   */
 
   loading: '~/components/Loading',
+  loadingIndicator: '~/components/loadingSPA.html',
 
   /*
   ** Global CSS

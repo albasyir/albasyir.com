@@ -32,7 +32,7 @@
 
   @media only screen and (max-width: 400px) {
     .albasyirGroupFoot {
-      font-size: 30pt;
+      font-size: 35pt;
       margin-top: -65px;
     }
   }
@@ -42,13 +42,13 @@
 <template>
     <footer class='container-fluid pt-5 mt-5'>
         <div class='container bg-light pt-5 px-md-5 px-3 mt-5'>
-          <div class='become-partner card shadow-lg mx-auto py-5 px-5'>
+          <div class='become-partner card shadow-lg mx-auto p-2 p-md-5'>
             <div class='card-body'>
               <div class='row'>
-                <div class='col-12 col-lg-2 col-sm-3'>
+                <div class='d-none d-sm-block col-0 col-lg-2 col-sm-4'>
                   <img width="100%" src="/icon.png" />
                 </div>
-                <div class='col-12 col-lg-10 col-sm-9'>
+                <div class='col-12 col-lg-10 col-sm-8'>
                   <h2>Gabung menjadi Partner Albasyir</h2>
                   <p>
                     Albasyir menyediakan pengembangan dan konsultasi terbaik.
@@ -63,15 +63,17 @@
               Albasyir Can!
             </div>
           </div>
-          <div class='container pt-0 pt-md-5 pb-3'>
+          <div class='container pb-3 pt-0 pt-md-5'>
             <div class='row'>
               <div class='col-12 col-md-4 col-sm-6'>
-                <div class='display-4 pb-3'>
+                <div class='display-4 pb-3 pt-5'>
                   Ekosistem
                 </div>
                 <ul class="list-group pr-5">
                   <li class="list-group-item-action bg-transparent list-group-item border-0 py-1">
-                    Hosting
+                    <nuxt-link tag='a' to='/hosting'>
+                      Hosting
+                    </nuxt-link>
                   </li>
                   <li class="list-group-item-action bg-transparent list-group-item border-0 py-1">
                     Custom Design
@@ -82,7 +84,7 @@
                 </ul>
               </div>
               <div class='col-12 col-md-8 col-sm-6'>
-                <div class='display-4 pb-3'>Klien saya yang luar biasa..</div>
+                <div class='display-4 pb-3 pt-5'>Klien saya yang luar biasa..</div>
                 <p>
                   Kami sangat senang melihat hasil kerja kami digunakan dalam Proyek Pribadi, Aplikasi Perusahaan Besar,
                   Proyek Pemerintah atau di Universitas Bergengsi.

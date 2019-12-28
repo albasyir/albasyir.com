@@ -6,3 +6,7 @@
 .vh-100 {
     min-height: 100vh;
 }
+
+.fade {
+  transition: opacity 2s ease-in-out;
+}
