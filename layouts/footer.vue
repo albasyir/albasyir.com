@@ -8,35 +8,6 @@
     margin-top: -120px;
     max-width: 1000px;
   }
-
-  .albasyirGroupFoot {
-    font-size: 85pt;
-    position: absolute;
-    left: 0;
-    margin-top: -105px;
-  }
-
-  @media only screen and (max-width: 768px) {
-    .albasyirGroupFoot {
-      font-size: 50pt;
-      margin-top: -80px;
-    }
-  }
-
-  @media only screen and (max-width: 600px) {
-    .albasyirGroupFoot {
-      font-size: 40pt;
-      margin-top: -73px;
-    }
-  }
-
-  @media only screen and (max-width: 400px) {
-    .albasyirGroupFoot {
-      font-size: 35pt;
-      margin-top: -65px;
-    }
-  }
-
 </style>
 
 <template>
@@ -56,11 +27,6 @@
                   </p>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class='container py-5'>
-            <div class='albasyirGroupFoot font-weight-bold'>
-              Albasyir Can!
             </div>
           </div>
           <div class='container pb-3 pt-0 pt-md-5'>
